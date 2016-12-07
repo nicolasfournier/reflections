@@ -1,0 +1,23 @@
+
+git commands
+---------------
+
+git init
+creates an empty .git subdirectory in my current directory
+
+git clone http://github.org/udacity/asteroids.git
+gets the repository of asteroids from some remote source and stores it in the local .git directory.  It includes the entire history of commits and allows me to travel back in time through the version history of that repository.  I don't have to run git init first.
+
+git diff <commitIDnumber1> <commitIDnumber2>
+compares the files between two commited versions of a project
+
+git log --stat
+shows statistics on changes for each version.  The most recent is shown first! 
+
+git status
+
+git checkout <commitIDnumber1>
+retrieve a certain commited version from the repository to work on it.  If I don't work on the latest version, I should probably create a branch.
+
+git add <filename>
+adds filename to the staging area, which is a sort of directory that contains all files that will be added to the next commit.  Sounds a bit tedious.  if I later change the file I need to add it again otherwise an old version gets commited.  git would prefer if git worked out by itself what has changed and always used the latest version of my files.
