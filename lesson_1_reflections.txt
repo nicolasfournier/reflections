@@ -1,0 +1,63 @@
+the diff helped quickly find changes and not getting mixed up between the two files
+
+Version control is essential to allow branching and trying things out without loosing old work at some stable point.  it also ensures that progress can be documented.
+
+manually having to decide when to commit has the advantage of allowing me to choose a good point oin time after a logical unit of work has been done.  I can then also add comments to document it.  The automated versioning allows neither.  However, from experience I know that I tend not to take the time to either create versions regularly nor to write comments.
+
+It is essential to store at the same time all files that are related to a project.  It eases going back to a consistent version of the entire project. This is due to the fact that a programming project is normally split across files.  It is in the nature of a software project to be split across files, just as other documents have cvhapters.  The project and each file therein however only makes sense in conjunction with the other files.   Google docs does not need this as normally text documents are self contained. 
+
+The checkout command allows me to go back to an old version of the code.  I should probably commit whatever I have currently worked on.  That way I can always come back to it.  Going back to an older version allows me to determine when a bug was introduced, and narrow down the location of the bug. This should make bug-fixing quite easy, if it can be reproduced easily. The correction should however be performed on the most recent version.
+
+Also git makes it easy to try out new things without risk, as it is easy to go back to a stable version.
+
+
+What happens when you initialize a repository? Why do you need to do it?
+it creates a new empty .git directory where git can later store all its data
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+the staging area shows the currently active commit, whereas the .git directory stores all different commits that I made over time, allowing me to go back and forward through the various commits
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+by calling git commit 
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+manually?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git commands
+---------------
+
+git init
+
+git clone http://github.org/udacity/asteroids.git
+
+git diff commitIDnumber1 commitIDnumber2
+
+git log --stat
+shows statistics on changes for each version.  The most recent is shown first! 
+
+git status
+
+git checkout commitIDnumber1
