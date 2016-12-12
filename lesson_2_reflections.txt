@@ -4,30 +4,21 @@ it creates a new empty .git directory where git can later store all its data
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
-the staging area allow me to specify what files I want to commit in the next commit
+the staging area allow me to specify what files I want to commit in the next commit.  It allows a fine-grained control of what files to commit, thereby allowing me to commit only certain changes even whe I have made some others I am not yet sure about.  
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+How can you use the staging area to make sure you have one commit per logical change?
+I can assemble all the files that are affected by a certain change and comit them together with a certain message.
+I could have worked on different files for different issues, but still commit them separately, to keep only commit one logical change at a time
 
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+branches can be useful to create a version in which I can try things without risking to affect the functioning of the main branch.  later I will be able to merge this into the main branch if it works well.
 
 How do the diagrams help you visualize the branch structure?
+the diagrams helpto remember what a certain commit is based on and that there are other features added to other branches that are not in the current one.  we may wish to merge those later.
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+merging two branches has the effect of keeping all added lines and removing all deleted lines when compared to the oldes common ancestor.  This might cause data dependency problems, if there is no further analysis...
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
-manually?
-
-
-
-
-
-How is the staging area different from the working directory and the repository? What value do you think it offers?
-
-
-
-
-
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+auto-merge makes it very much easier to combine different development branches. however, it would need to be done regularly if two branches are supposed to continue in parallel and the master develops, because after too many changes, the merging might get too complicated.

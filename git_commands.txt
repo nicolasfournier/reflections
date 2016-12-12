@@ -10,6 +10,13 @@ gets the repository of asteroids from some remote source and stores it in the lo
 
 git diff <commitIDnumber1> <commitIDnumber2>
 compares the files between two commited versions of a project
+git diff
+compares the files in the working directory to those in the staging area
+git diff --staged
+compares the files in the staging area to the files in the last commit (the commit I currently have checked out)
+
+git show <commitID>
+shows the changes introduced by a commit in comparison to its parent (which might not be the commit listed chronologically before it, in the case when several branches have been merged together because the commits of different merged branches are interleaved and sorted by time, so doing a diff between chronologically consecutively listed commits is not necessarily the same as a diff between a branch and its parent)
 
 git log --stat
 shows statistics on changes for each version.  The most recent is shown first! 
@@ -19,5 +26,19 @@ git status
 git checkout <commitIDnumber1>
 retrieve a certain commited version from the repository to work on it.  If I don't work on the latest version, I should probably create a branch.
 
+git checkout -b <branchname>
+automatically creates a new branch with the name branchname, and then checks it out.
+
 git add <filename>
 adds filename to the staging area, which is a sort of directory that contains all files that will be added to the next commit.  Sounds a bit tedious.  if I later change the file I need to add it again otherwise an old version gets commited.  git would prefer if git worked out by itself what has changed and always used the latest version of my files.
+
+git branch
+shows me the currently available branches
+git branch <branchname>
+creates a new branch with the given name using the currently checked-out version
+
+git remote [-v]
+shows me the currently available remote repositories
+git remote add <remotename> <location>
+create a new remote repository with name remotename, and a internet location 
+git remote <remotename> push
