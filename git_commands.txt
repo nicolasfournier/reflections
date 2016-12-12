@@ -30,7 +30,7 @@ git checkout -b <branchname>
 automatically creates a new branch with the name branchname, and then checks it out.
 
 git add <filename>
-adds filename to the staging area, which is a sort of directory that contains all files that will be added to the next commit.  Sounds a bit tedious.  if I later change the file I need to add it again otherwise an old version gets commited.  git would prefer if git worked out by itself what has changed and always used the latest version of my files.
+adds filename to the staging area, which is a sort of directory that contains all files that will be added to the next commit.  Sounds a bit tedious.  if I later change the file I need to add it again otherwise an old version gets commited.  I would prefer if git worked out by itself what has changed and always used the latest version of my files.
 
 git branch
 shows me the currently available branches
@@ -41,4 +41,5 @@ git remote [-v]
 shows me the currently available remote repositories
 git remote add <remotename> <location>
 create a new remote repository with name remotename, and a internet location 
-git remote <remotename> push
+git push <remotename> <branchnametopush>
+pushes the branch onto the remote repository
