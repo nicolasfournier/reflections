@@ -43,3 +43,14 @@ git remote add <remotename> <location>
 create a new remote repository with name remotename, and a internet location 
 git push <remotename> <branchnametopush>
 pushes the branch onto the remote repository
+
+git fetch <remotename>
+retrieves updates from the remote repository as a branch, without automatically merging, to allow comparing and manual merging.  The new branch is called <remotename>/<branchname>  (i.e. often: "origin/master"). It is also a much faster way to retrieve updates from the remote, as it allows delaying the interactive merging.
+
+git pull <remotename> <branchname>
+is a concatenation of "git fetch <remotename>" and "git merge <branchname> <remotename>/<branchname>" 
+
+GitHub functionalities
+---------------
+create new files
+fork repositories: it create a clone of the forked project under my own github account, giving me freedom to change it however I want it, while still giving some credit to the original project author.

@@ -6,3 +6,7 @@ If other users work on the same project, any of their changes could lead to unex
 
 Describe the differences between forks, clones, and branches. When would you use one instead of another?
 branches are working inside a repository and allow me to try out different modifications without affecting a main branch.  cloning and forking is rather used on repositories (not within) to create a copy, where fork is used to make a copy that is intended to live on independently of the original, while clone is rather used to have a local copy of a repository to work on, while the synchronised version is on the server.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+Fetching without merging retrieves updates from the remote repository as a branch, without automatically merging.  This allows us to compare and then do a manual merge.  It is also a much faster way to retrieve updates from the remote, as it allows delaying the interactive merging.
+
